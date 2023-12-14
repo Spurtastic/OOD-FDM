@@ -26,8 +26,6 @@ class HardDriveTest {
 		
 
 		assertTrue(Modifier.isFinal(modifiers));
-			
-		
 		
 		
 	}
@@ -36,6 +34,7 @@ class HardDriveTest {
 	public void testOutPut() {
 		HardDrive d1 = new HardDrive("Seagate", 1.0);
 		assertTrue(d1.readData("Random").equals("Random is being read"));
+		d1.writeData("account", "Cash");
 		
 	}
 	

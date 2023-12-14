@@ -5,7 +5,7 @@ public class HardDrive {
 
 	private final String MODEL;
 	
-	private double CAPACITY ;
+	private final double CAPACITY ;
 	
 	private double usedSpace;
 	
@@ -25,7 +25,7 @@ public class HardDrive {
 	
 	public void writeData(String data, String file) {
 		System.out.println(readData(file));
-		System.out.printf("%s writing to $s", data, file);
+		System.out.printf("%s writing to %s", data, file);
 	}
 
 	public String getMODEL() {

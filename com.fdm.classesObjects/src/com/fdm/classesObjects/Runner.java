@@ -21,6 +21,27 @@ public class Runner {
 		// Memory 2
 		Memory corsairMemory = new Memory("Corsair", 8.00, 1333.00);
 		
+		
+		
+		Computer c1 = new Computer("Bessy", dell, corsairMemory, celeronProcessor);
+		
+		PowerSource p1 = new PowerSource();
+		p1.setWatts(550);
+		c1.getPower(p1);
+		
+		Computer c2 = new Computer("Merv", seagate, king, xeon);
+		
+		ComputerStore barnsteinStore = new ComputerStore("Barnnies");
+		
+		barnsteinStore.addComputer(c1);
+		barnsteinStore.addComputer(c2);
+		
+		barnsteinStore.getAllComputers();
+		
+		System.out.println(barnsteinStore.getAllComputers());
+		
+		
+		
 
 	}
 

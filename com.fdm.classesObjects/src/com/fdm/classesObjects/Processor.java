@@ -14,21 +14,19 @@ public class Processor {
 	public String processData(String data){
 		String retvalString = "%s is being processed";
 		return String.format(retvalString, data);
-		
 	}
 	
 	public final String getMODEL() {
 		return MODEL;
 	}
+	
 	public final int getNUMBER_OF_CORES() {
 		return NUMBER_OF_CORES;
 	}
+	
 	public final double getSPEED() {
 		return SPEED;
 	}
-
-	
-	
 	
 
 }
