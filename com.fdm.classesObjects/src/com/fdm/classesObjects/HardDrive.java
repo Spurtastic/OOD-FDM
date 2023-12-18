@@ -3,7 +3,7 @@ package com.fdm.classesObjects;
 public class HardDrive {
 
 
-	private final String MODEL;
+	private String MODEL;
 	
 	private final double CAPACITY ;
 	
@@ -36,7 +36,6 @@ public class HardDrive {
 		return CAPACITY;
 	}
 	
-
 	public double getUsedSpace() {
 		return usedSpace;
 	}

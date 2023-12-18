@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>com.fdm.Static</name>
+	<name>com.fdmgroup.mutable</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -16,7 +16,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1702525284364</id>
+			<id>1702535438789</id>
 			<name></name>
 			<type>30</type>
 			<matcher>
