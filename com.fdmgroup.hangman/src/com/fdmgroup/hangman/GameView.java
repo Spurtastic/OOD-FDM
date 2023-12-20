@@ -52,35 +52,7 @@ public class GameView {
             System.out.println("The word now looks like this: "+wordState);
             System.out.printf("You have %s guesses left.\n", lives);
             // get input from user
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("Your guess: ");
-            String input = scanner.nextLine().toUpperCase();
-
-            // check if the letter is in the word and if it is repeated fill from the left
-            Set <String> set = new HashSet<>();
-            if (wordToGuess.contains(input)){
-                set.add(input);
-                // iterate through the word and check if the letter is in the word
-                if (set.contains(input)){
-                    System.out.println("Already guessed that");
-                }
-                
-                for (int i = 0; i < wordToGuess.length(); i++) {
-                    // if the letter is in the word replace the dash with the letter and fill if there are more than one
-                    if (wordToGuess.charAt(i) == input.charAt(0)){
-                        wordState = wordState.substring(0, i) + input + wordState.substring(i + 1);
-                    }
-                }
-            }else if (!wordToGuess.contains(input)){
-                lives--;
-            }
-            if (wordState.equals(wordToGuess)){
-                System.out.println("The word now looks like this: "+wordToGuess);
-                System.out.println("You win!");
-                break;
-            }
-            if (lives == 0){
-                System.out.println("You lose!");
+            Scanner scanner = new Scanner(System.in);S
                 break;
             }
 
