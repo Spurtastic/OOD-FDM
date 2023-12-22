@@ -5,43 +5,58 @@ import java.util.List;
 
 public class Catalogue implements ReadItemCommand {
     // Arraylist is an implementation of the list interface
-    private List<Book> books = new ArrayList<>();
+    private ArrayList<Book> books = new ArrayList<Book>();
+    private WriteItemCommand WIC;
+    private ReadItemCommand RIC;
 
-    public Catalogue (ReadItemCommand readItemCommand) {
-        this.books = readItemCommand.readAll();
+    public Catalogue () {
     }
 
-    List<Book> getAllBooks() {
+    public void setWriteCommand(WriteItemCommand writeItemCommand) {
+        this.WIC = writeItemCommand;
+    }
+
+    public void setReadCommand(ReadItemCommand readItemCommand) {
+        this.RIC = readItemCommand;
+    }
+
+    ArrayList<Book> getAllBooks() {
         // call ReadItemCommand
 
         return this.books;
     }
 
     void addBook(Book bk) {
-        this.books.add(bk);
+        this.WIC.insertItem(bk);
     }
 
-    void addBooks(List<Book> bks) {
-        this.books.addAll(bks);
+    public ArrayList<Book> addBooks (ArrayList<Book> books) {
+        for (Book book : books) {
+            this.addBook(book);
+        } return this.books;
     }
 
-    void getBook(String isbn){
+    Book getBook(String isbn){
         // TODO
+        return this.RIC.getItem(isbn);
     }
 
     void deleteBook(Book bk){
         // TODO
-        this.books.remove(bk);
+        this.WIC.deleteItem(bk);
     }
 
     void deleteAllBooks(){
         // TODO
-        this.books = new ArrayList<Book>();
+        ArrayList<Book> books = this.RIC.readAll();
+        for (Book b : books) {
+            this.deleteBook(b);
+        }
     }
 
 
     @Override
-    public List<Book> readAll() {
+    public ArrayList<Book> readAll() {
         return new ArrayList<Book>();
     }
 

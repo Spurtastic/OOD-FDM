@@ -1,9 +1,10 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public interface ReadItemCommand {
 
-    List<Book> readAll();
+    ArrayList<Book> readAll();
     Book getItem(String id);
 }
